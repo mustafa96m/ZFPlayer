@@ -304,6 +304,8 @@ typedef NS_ENUM(NSInteger, PanDirection){
         self.scrollView     = nil;
         self.indexPath     = nil;
     }
+    if ([self.delegate respondsToSelector:@selector(zf_playerIsEnded)]) { [self.delegate zf_playerIsEnded]; }
+
 }
 
 /**
